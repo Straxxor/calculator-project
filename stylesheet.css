@@ -1,41 +1,60 @@
-.holder {
-    height: 800px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-weight: normal;
 }
 
-.buttonreg {
-    background-color: aquamarine;
-    font-size: 20px;
-}
-
-html {
-    font-family: Arial, Helvetica, sans-serif;
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(to right, #00aaff, #00ff7d);
 }
 
 .container {
     display: grid;
-    grid-template-columns: 50px 50px 50px 50px;
-    grid-template-rows: 50px;
-    grid-auto-rows: 50px;
-    gap: 10px 10px;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+
+}
+
+.container > button {
+    cursor: pointer;
+    pointer-events: auto;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
+    background-color: rgba(255, 255, 255, .75);
+}
+
+.container > button:hover {
+   background-color:  rgba(255, 255, 255, .9);
+}
+
+.span-two {
+    grid-column: span 2;
 }
 
 .display {
-    grid-column-start: 1;
-    grid-column-end: 5;
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
     display: flex;
-    align-items: center;
-    justify-content: end;
-    background-color: firebrick;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
-.operatorbutt {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-    flex: 0 0 75%;
-    align-items: center;
-    justify-content: center;
+.display .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.display .current-operand {
+    color: white;
+    font-size: 2.5rem;
 }

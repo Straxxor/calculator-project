@@ -3,32 +3,35 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Calculator using JS</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="stylesheet.css">
     </head>
     <body>
-        <div class="holder">
-            <div class="container">
-                <div class="display">placeholder</div>
-                <button class="buttonreg">AC</button>
-                <button class="buttonreg">*</button>
-                <button class="buttonreg">0</button>
-                <button class="buttonreg">=</button>
-                <button class="buttonreg">/</button>
-                <button class="buttonreg">1</button>
-                <button class="buttonreg">2</button>
-                <button class="buttonreg">3</button>
-                <button class="buttonreg">-</button>
-                <button class="buttonreg">4</button>
-                <button class="buttonreg">5</button>
-                <button class="buttonreg">6</button>
-                <button class="buttonreg">+</button>
-                <button class="buttonreg">7</button>
-                <button class="buttonreg">8</button>
-                <button class="buttonreg">9</button>
+        <div class="container">
+            <div class="display">
+                <div data-previous-operand class="previous-operand"></div>
+                <div data-current-operand class="current-operand"></div>
             </div>
+            <button data-all-clear class="span-two">AC</button>
+            <button data-delete>DEL</button>
+            <button data-operation>/</button>
+            <button data-number>1</button>
+            <button data-number>2</button>
+            <button data-number>3</button>
+            <button data-operation>*</button>
+            <button data-number>4</button>
+            <button data-number>5</button>
+            <button data-number>6</button>
+            <button data-operation>+</button>
+            <button data-number>7</button>
+            <button data-number>8</button>
+            <button data-number>9</button>
+            <button data-operation>-</button>
+            <button data-number>.</button>
+            <button data-number>0</button>
+            <button data-equals class="span-two">=</button>
         </div>
         <script src="script.js" async defer></script>
     </body>
